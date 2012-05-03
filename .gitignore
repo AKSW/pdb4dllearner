@@ -1,2 +1,8 @@
 .settings/*
 !.gitignore
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear

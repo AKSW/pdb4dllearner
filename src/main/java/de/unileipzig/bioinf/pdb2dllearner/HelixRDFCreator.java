@@ -103,7 +103,7 @@ public class HelixRDFCreator {
 		Boolean dlLearn = false;
 		Boolean wekaLearn = false;
 		
-		int dataSet = 5;
+		int dataSet = 4;
 
 		/*
 		 * data for test purpose
@@ -419,7 +419,6 @@ public class HelixRDFCreator {
 			for (int i = 0 ; i < negatives.size() ; i++ ) {
 				lp.append("\"" + negatives.get(i).getURI() + "\", ");
 				try{
-					_logger.info("Negative residue: " + negatives.get(i).getURI());
 					Statement spo = model.getModel().getProperty(negatives.get(i), type);
 					resourceStringBuffer.get(spo.getResource()).append("\"" + negatives.get(i).getURI() + "\", ");
 				} catch (NullPointerException e) {
